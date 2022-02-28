@@ -1,0 +1,78 @@
+<h1>Products</h1>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+    >
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+    33
+  </p>
+  <p *ngIf="product.image">
+    <img class="myimage" [src]="product.image" />
+  </p>
+
+  <button (click)="share()">Share</button>
+
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
+</div>
+<div
+  id="carouselExampleControls"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Fso%2Fphone&psig=AOvVaw0ZcOkEcK3TNmgv-APD8vO4&ust=1634282516859000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKCSr5KvyfMCFQAAAAAdAAAAABAD"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Fso%2Fphone&psig=AOvVaw0ZcOkEcK3TNmgv-APD8vO4&ust=1634282516859000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKCSr5KvyfMCFQAAAAAdAAAAABAD"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Fso%2Fphone&psig=AOvVaw0ZcOkEcK3TNmgv-APD8vO4&ust=1634282516859000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKCSr5KvyfMCFQAAAAAdAAAAABAD"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

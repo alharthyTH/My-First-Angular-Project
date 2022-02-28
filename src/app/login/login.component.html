@@ -1,0 +1,32 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+<div>
+  <label for="name">
+    Username
+  </label>
+  <input id="user" type="text" formControlName="user">
+</div>
+
+<div>
+  <label for="address">
+    Password
+  </label>
+  <input id="pass" type="text" formControlName="pass">
+</div>
+
+
+
+
+
+
+
+
+<button routerLink="/" >Login</button>
+<a>
+-
+</a>
+<button type="submit" (click)="onPreviousClick()"[routerLink]="['/signup']">Signup</button>
+
+
+
+</form>

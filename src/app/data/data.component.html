@@ -1,0 +1,11 @@
+<h3>Users data table</h3>
+
+<div class="shipping-item" *ngFor="let users of usersData | async">
+  <span>{{ users.name }}</span>
+  <span>{{ users.age}}</span>
+  <span>{{ users.location}}</span>
+</div>
+
+
+
+
